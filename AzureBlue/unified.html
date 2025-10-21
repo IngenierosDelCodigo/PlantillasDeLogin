@@ -6,40 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap de Microsoft -->
+    <!-- Bootstrap -->
     <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Estilos comunes (fuentes, logos de IdP, etc.) -->
+    <!-- Fuentes -->
     <style id="common">
         @font-face {
             font-family: 'SegoeUI';
-            src: url(https://login.microsoftonline.com/templates/src/fonts/segoeui.WOFF);
+            src: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/fonts/segoeui.WOFF);
             font-weight: normal;
         }
         @font-face {
             font-family: 'SegoeUI';
-            src: url(https://login.microsoftonline.com/templates/src/fonts/segoeui_bold.WOFF);
+            src: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/fonts/segoeui_bold.WOFF);
             font-weight: bold;
         }
-        /* Aquí van los estilos de logos de IdP (Amazon, Google, Microsoft, etc.) */
-        /* ... el resto de tu CSS existente ... */
+
+        /* Logos de IdP (Amazon, Google, Microsoft, etc.) */
+        #AmazonExchange { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/amazon.svg); }
+        #AmazonExchange:hover { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/amazon.svg); }
+
+        #FacebookExchange { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/facebook.svg); }
+        #FacebookExchange:hover { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/facebook.svg); }
+
+        #GoogleExchange { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/google.svg); }
+        #GoogleExchange:hover { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/google.svg); }
+
+        #LinkedInExchange { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/linkedin.svg); }
+        #LinkedInExchange:hover { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/linkedin.svg); }
+
+        #MicrosoftAccountExchange { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/microsoft.svg); }
+        #MicrosoftAccountExchange:hover { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/microsoft.svg); }
+
+        #TwitterExchange { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/twitter.svg); }
+        #TwitterExchange:hover { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/twitter.svg); }
+
+        #AppleExchange,
+        #AppleManagedExchange { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/apple.svg); }
+        #AppleExchange:hover,
+        #AppleManagedExchange:hover { background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/apple.svg); }
+
+        .buttons #cancel:before {
+            content: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/images/left-arrow.svg);
+        }
     </style>
 
-    <!-- Estilos para idpSelector -->
+    <!-- Selector de IdP local -->
     <style id="idpselector">
-        /* Mantener todo igual, para que los botones de login social funcionen */
-        /* ... tu CSS existente de idpSelector ... */
+        #SignInWithLogonNameExchange, #SignUpWithLogonEmailExchange, #SignUpWithLogonNameExchange {
+            background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/colored/local.svg);
+        }
+        #SignInWithLogonNameExchange:hover, #SignUpWithLogonEmailExchange:hover, #SignUpWithLogonNameExchange:hover {
+            background-image: url(https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/idp_logos/white/local.svg);
+        }
+        #SignUpWithLogonEmailExchange.text-link {
+            background-image: none;
+            background-color: transparent !important;
+        }
+        #SignUpWithLogonEmailExchange.text-link:hover {
+            background-image: none;
+            background-color: transparent !important;
+        }
     </style>
 
-    <!-- Estilos unificados de B2C -->
-    <style>
-        /* Mantener los estilos inyectados por B2C */
-        /* ... copia todo tu CSS de body, .container, .panel-default, #api, etc. ... */
-    </style>
+    <!-- Estilos principales de B2C -->
+    <link rel="stylesheet" href="https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/css/unified.css">
 </head>
+
 <body>
     <div id="background_branding_container" data-tenant-branding-background-color="true">
-        <img data-tenant-branding-background="true" src="https://login.microsoftonline.com/templates/src/backgrounds/1-1.png" alt="Illustration"/>
+        <img data-tenant-branding-background="true" src="https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/backgrounds/1-1.png" alt="Illustration" />
     </div>
 
     <div class="container unified_container" role="presentation">
@@ -47,17 +83,14 @@
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img class="companyLogo" data-tenant-branding-logo="true" src="https://login.microsoftonline.com/templates/src/images/logo.svg" alt="Logo">
-
-                        <!-- MENSAJE DE AYUDA / INFORMACIÓN -->
+                        <img class="companyLogo" data-tenant-branding-logo="true" src="https://ingenierosdelcodigo.github.io/PlantillasDeLogin/src/images/logo.svg" alt="Logo">
+                        
                         <p style="color:#555; font-size:14px; margin-bottom:15px;">
                             Bienvenido. Ingresa tu correo electrónico corporativo para iniciar sesión.
                         </p>
 
-                        <!-- Contenedor donde B2C inyecta sus inputs y botones -->
-                        <div id="api" role="main">
-                            <!-- No tocar nada aquí, B2C coloca todo -->
-                        </div>
+                        <!-- Contenedor donde Azure B2C inyecta el formulario -->
+                        <div id="api" role="main"></div>
                     </div>
                 </div>
             </div>
@@ -65,6 +98,4 @@
     </div>
 </body>
 </html>
-
-
 
