@@ -64,7 +64,7 @@
         }
 
         .login-box h2 {
-            font-weight: 700;
+            font-weight: 400;
             margin-bottom: 10px;
             color: #003366;
         }
@@ -117,6 +117,17 @@
             text-decoration: underline;
         }
 
+        .alerta-info {
+            background-color: #e9f3ff;
+            border: 1px solid #0073e6;
+            color: #003366;
+            font-size: 14px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
         /* ======== RESPONSIVE ======== */
         @media (max-width: 600px) {
             .login-box {
@@ -142,8 +153,9 @@
         <div class="login-box">
             <img class="logo" src="logo.svg" alt="Logo">
             <h2>Bienvenido</h2>
-            <p>Inicia sesión con tu cuenta corporativa</p>
-
+            <div class="alerta-info">
+                Si es tu primer inicio de sesión, haz clic en <strong>“¿Olvidó su contraseña?”</strong> para activar tu cuenta.
+            </div>
             <!-- Azure AD B2C inyecta el formulario aquí -->
             <div id="api" role="main"></div>
 
@@ -154,5 +166,6 @@
 
 </body>
 </html>
+
 
 
