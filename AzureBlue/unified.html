@@ -85,28 +85,36 @@
             text-align: left;
         }
 
-        /* ======== BOTONES ======== */
-        button, .btn {
-            font-weight: 600;
-            padding: 10px 15px;
-        }
+/* ======== BOTONES ======== */
+button, .btn {
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 0;        /* esquinas cuadradas */
+    border: none;            /* sin borde */
+    color: #fff;             /* letras blancas */
+    cursor: pointer;
+}
 
-        .btn-primary {
-            background-color: #0073e6;
-        }
+/* Botón principal */
+.btn-primary {
+    background-color: #0073e6;  /* azul */
+}
 
-        .btn-primary:hover {
-            background-color: #005bb5;
-        }
+.btn-primary:hover {
+    background-color: #005bb5;  /* azul más oscuro al pasar el mouse */
+}
 
-        .btn-secondary {
-            background-color: #ccc;
-            color: #333;
-        }
+/* Botón secundario (opcional) */
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+}
 
-        .btn-secondary:hover {
-            background-color: #bbb;
-        }
+.btn-secondary:hover {
+    background-color: #bbb;
+}
+
 
         /* ======== ENLACES ======== */
         a {
@@ -232,6 +240,7 @@
 
 </body>
 </html>
+
 
 
 
