@@ -133,89 +133,71 @@
             text-align: left;
         }
 
-        /* Quita el margen entre el label y el input */
-.entry-item {
-    margin-bottom: 15px; /* controla el espacio entre campos */
-}
+        /* ======== CAMPOS DE INPUT ======== */
+        .entry-item {
+            margin-bottom: 15px; /* espacio entre campos */
+        }
 
-.entry-item .password-label {
-    margin-bottom: 0; /* quita margen del contenedor */
-    display: flex;
-    justify-content: space-between; /* deja el link “¿Olvidó su contraseña?” al lado derecho */
-    align-items: center;
-}
+        /* Label principal */
+        .entry-item > label,
+        .entry-item .password-label label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #333;
+            padding: 0;
+        }
 
-.entry-item .password-label label {
-    margin: 0;         /* quita margen del label */
-    padding: 0;        /* quita padding interno */
-    font-weight: 500;  /* opcional */
-    font-size: 14px;   /* opcional */
-    color: #333;       /* opcional */
-}
+        /* Contenedor para password con link */
+        .entry-item .password-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0;
+        }
 
-.entry-item input[type="password"] {
-    margin-top: 0px;   /* ajusta espacio entre label y input */
-    display: block;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px;
-    font-size: 14px;
-}
+        .password-label a {
+            font-size: 13px;
+            color: #0073e6;
+            text-decoration: none;
+        }
 
-.password-label a {
-    font-size: 13px;
-    color: #0073e6;
-    text-decoration: none;
-}
+        .password-label a:hover {
+            text-decoration: underline;
+        }
 
-.password-label a:hover {
-    text-decoration: underline;
-}
+        /* Input general */
+        .entry-item input[type="email"],
+        .entry-item input[type="password"] {
+            display: block;
+            width: 100%;
+            border: 1px solid #ccc;      /* borde normal */
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 0;
+            background-color: #fff;       /* fondo siempre blanco */
+        }
 
-        /* Contenedor del campo */
-.entry-item {
-    margin-bottom: 15px;
-}
+        /* Input con error */
+        .entry-item input.highlightError {
+            border-color: #d93025;        /* borde rojo */
+            background-color: #fff;       /* mantiene fondo blanco */
+        }
 
-/* Label principal */
-.entry-item > label {
-    display: block;
-    margin-bottom: 4px;   /* ajusta el espacio exacto con el input */
-    font-weight: 500;
-    font-size: 14px;
-    color: #333;
-}
+        /* Mensaje de error */
+        .entry-item .error {
+            margin-top: 4px;
+            margin-bottom: 0;
+        }
 
-/* Campo de entrada de correo */
-.entry-item input[type="email"] {
-    display: block;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px;
-    font-size: 14px;
-    margin-top: 0;  /* elimina espacio innecesario arriba */
-}
-
-/* Estado de error (resalta el borde y el color del texto) */
-.entry-item input[type="email"].highlightError {
-    border-color: #d93025;
-    background-color: #fff5f5;
-}
-
-/* Mensaje de error */
-.entry-item .error {
-    margin-top: 4px;
-    margin-bottom: 0;
-}
-
-.entry-item .error p {
-    color: #d93025;
-    font-size: 13px;
-    margin: 0;
-    padding: 0;
-}
+        .entry-item .error p {
+            color: #d93025;
+            font-size: 13px;
+            margin: 0;
+            padding: 0;
+        }
 
         /* ======== RESPONSIVE ======== */
         @media (max-width: 600px) {
@@ -255,6 +237,8 @@
 
 </body>
 </html>
+
+
 
 
 
